@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>BTL TK WEB NHÓM 1</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+ <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+   
+    <style> 
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+      background-color: #1a8c8c;
+    }
+    .banner-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    .banner-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 5s ease-in-out;
+    }
+    @keyframes slideShow {
+      0% {
+        opacity: 0;
+      }
+      8% {
+        opacity: 1;
+      }
+      30% {
+        opacity: 1;
+      }
+      38% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .banner-img:nth-child(1) {
+      animation: slideShow 12s infinite 0s;
+    }
+    .banner-img:nth-child(2) {
+      animation: slideShow 12s infinite 3s;
+    }
+    .banner-img:nth-child(3) {
+      animation: slideShow 12s infinite 6s;
+    }
+    .banner-img:nth-child(4) {
+      animation: slideShow 12s infinite 9s;
+    }
+   
+   
+.section img{
+  width: 90%;
+}
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+      }
+
+      header.navbar {
+        background-color: #b8f2e6;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px 20px;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .logo img {
+        width: 200px;
+        height: auto;
+      }
+
+      .menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+        flex: 1;
+      }
+
+      .menu a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      .menu a:hover {
+        background-color: #007b7b;
+        color: white;
+      }
+
+      .right-section {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .search-box {
+        background: white;
+        border-radius: 20px;
+        padding: 4px 10px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .search-box input {
+        border: none;
+        outline: none;
+        background: transparent;
+        padding: 6px;
+        font-size: 14px;
+        width: 120px;
+      }
+
+      .search-box i {
+        color: gray;
+      }
+
+      .right-section a#b i {
+        font-size: 20px;
+        color: #000;
+        transition: 0.3s;
+      }
+
+      .right-section a#b i:hover {
+        color: #007b7b;
+      }
+
+      .flag {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      /* Responsive cho điện thoại */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+        }
+
+        .logo img {
+          width: 160px;
+        }
+
+        .menu {
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          gap: 10px;
+        }
+
+        .right-section {
+          justify-content: flex-start;
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+
+        .search-box input {
+          width: 100px;
+        }
+
+        .menu a {
+          font-size: 16px;
+        }
+      }
+   
+     .container1 {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+
+    /* Tạo khối chứa ảnh + chữ */
+    .image-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 10px;
+      overflow: hidden; /* Đảm bảo không bị tràn */
+    }
+
+    /* Định dạng ảnh */
+    .image-container img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+
+    /* Định dạng chữ trong ảnh */
+    .text-overlay {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 14px;
+    }  
+    
+  
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  
+    .menu i {
+      color: #555;
+    }
+    
+  
+    .menu-label {
+      font-weight: bold;
+      display: inline-block;
+      background: #007bff;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      width: 100%;
+    }
+    #menu-toggle {
+      display: none;
+    }
+    .menu-content {
+      display: none;/*ẩn hoàn toàn 1 phần tử */
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+    #menu-toggle:checked + .menu-content {
+      display: block;
+    }
+    
+    .menu-content a {
+      display: block;
+      padding: 8px;
+      text-decoration: none;
+      color: #333;
+      border-radius: 5px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .menu-content a:hover {
+      background: #007bff;
+      color: white;
+    }
+    .content {
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    .section {
+      padding: 20px;
+      margin-top: 10px;
+      background: #e3f2fd;
+      border-radius: 8px;
+      min-height: 100px;
+    }
+   
+    .abc-img{
+width: 50%;
+}
+.icon{
+      display: flex;
+        font-size: 30px;
+        gap: 20px;
+        background-color: black;
+      color: white;
+      height: 50px;
+      }
+      .cuoi{
+        background-color: black;
+    color: white;
+        
+      }
+  
+      .container {
+    width: 80%;
+    max-width: 1000px;
+}
+.col-lg-5 {
+height: 20%;
+    border: 1px solid #ccc;
+      border-radius: 10px;
+   
+}
+.container2 {
+    width: 100%;
+    padding: 15px;
+  }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-lg-7,
+.col-lg-5 {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .col-lg-7,
+  .col-lg-5 {
+    width: 100%;
+  }
+}
+      .menu a:hover {
+        color: #007b7b;
+      }
+
+    
+      .user-icon {
+        font-size: 30px;
+        color: black;
+        cursor: pointer;
+      }
+
+     
+      .container2 {
+  width: 100%;
+  padding: 15px;
+}
+
+.doanh {
+  display: flex;
+  flex-wrap: wrap; /* tự động xuống dòng khi ko đủ chỗ*/
+  gap: 15px;
+  align-items: center;
+}
+
+.news-image {
+  width: 100%;
+  max-width: 420px; 
+  border-radius: 8px;
+}
+
+.news-text {
+  font-size: 20px;
+  margin-left: 20px;
+  flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .doanh {
+    flex-direction: column;
+    align-items: flex-start;/*Canh các phần tử theo mép trái */
+  }
+
+  .news-image {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .news-text {
+    font-size: 16px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .news-text {
+    font-size: 14px;
+  }
+}
+
+
+.footer-logo {
+  width: 100%;
+  max-width: 300px; /* Điều chỉnh kích thước logo */
+}
+
+.contact-info h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #007b7b;
+}
+
+.payment-method {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-logo {
+  width: 130px;
+  margin: 0 10px;
+}
+
+/* Footer bottom information */
+.manhinh {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .col-lg-4 {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-logo {
+    max-width: 250px;
+  }
+
+  .contact-info h3 {
+    font-size: 16px;
+  }
+
+  .payment-logo {
+    width: 100px;
+  }
+
+  .manhinh {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    max-width: 200px;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+  }
+
+  .manhinh {
+    font-size: 12px;
+  }
+}
+.container12 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+margin: auto;
+  background-color: #85e8e8;
+}
+
+header.navbar {
+  background-color: #b8f2e6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}
+.menu-content{
+  width: 100%;
+}
+.tren{
+        border: 2px solid red;
+        margin-left: 10%;
+        margin-right: 10%;
+        border-radius: 15px;
+    }
+    .tren p{
+        font-size: 30px;
+        margin-left: 25px;
+    }
+    .tren h2{
+        font-size: 40px;
+        color: red;
+        text-align: center;
+    }
+    .tren b{
+        color: blue;
+    }
+    .than{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px;
+        margin-left: 6%;
+    }
+    .giua1 input{
+      display: block;
+      margin-top: 10%;
+      width: 300px;    
+      height: 40px;   
+      padding: 10px;     
+      font-size: 18px;   
+    }
+    .giua1 p{
+        font-size: 15px;
+        color: grey;
+    }
+
+
+  </style>
+  </head>
+ 
+  <body>
+    <header class="navbar">
+      <div class="container12" style="width: 100%;">
+        <div class="logo">
+          <img src="ảnh logo ko nền-01.png" alt="Logo" />
+        </div>
+
+        <nav class="menu" style="font-family: Calibri;">
+          <a href="index.html">Trang Chủ</a>
+          <a href="khuvuichoi.htm">Điểm đến</a>
+          <a href="amthuc.htm">Ẩm Thực</a>
+          <a href="dichvu.htm">Dịch Vụ</a>
+          <a href="tintuc.htm">Tin Tức</a>
+          <a href="lienhe.htm">Liên Hệ</a>
+          <a href="dangnhap.htm">Đăng nhập</a>
+          <a href="danhsachdichvu.htm" class="">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </nav>
+
+        <div class="right-section">
+          <div class="search-box">
+            <input type="text" placeholder="Tìm Kiếm ..." />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <a id="b" href="dangky.htm"><i class="fa-solid fa-user"></i></a>
+        
+          <img src="snapedit_1742031043256.png" class="flag" />
+          <img src="snapedit_1742031055763.png" class="flag" />
+        </div>
+      </div>
+    </header>
+    <div class="banner">
+      <div class="banner-overlay">
+        <img src="ảnh trang chủ 1-01.png" alt="Khách sạn" class="banner-img" />
+        <img src="ảnh trang chủ 3-01.png" alt="Nhà hàng" class="banner-img" />
+        <img src="ảnh trang chủ 5-01.png" alt="Du lịch" class="banner-img" />
+        <img src="ảnh trang chủ 6-01.png" alt="Ẩm thực" class="banner-img" />
+      </div>
+    </div>
+    <div class="row row-1">
+      <div class="col-lg-7">
+        <div class="container">
+          <div class="title" style="margin-left: 40px;font-size: 25px;align-items: center;margin-top: 20px;">Quảng Ninh - một Việt Nam thu nhỏ</div>
+          <label class="menu-label" for="menu-toggle"> Mục lục ▼</label>
+          <input type="checkbox" id="menu-toggle" />
+
+          <div class="menu-content">
+            <a href="#section1">1. Bản sắc văn hóa đa dạng</a>
+            <a href="#section2">2. Thiên nhiên hùng vĩ, thắng cảnh nổi bật</a>
+            <a href="#section3">3. Hệ thống di tích phong phú</a>
+            <a href="#section4">4. Hệ thống công trình văn hóa hiện đại</a>
+            <a href="#section5">5. Văn hóa công nhân mở đặc trưng</a>
+            <a href="#section6">6. Di sản văn hóa phi vật thể phong phú</a>
+          </div>
+          <div class="content">
+            <div id="section1"  class="section">
+              <p style="font-size: 32px;" ><h3 >1. Bản sắc văn hóa đa dạng</h3>
+                Quảng Ninh mang đậm bản sắc văn hóa vùng Đông Bắc, là nơi giao thoa giữa văn hóa bản địa các vùng miền. Các dân tộc như Kinh, Tày, Dao, Sán Chỉ, Sán Dìu… vẫn bảo tồn nhiều nét văn hóa độc đáo, từ dân ca, phong tục, lễ hội đến trang phục và ẩm thực.
+              </p>
+              <img  src="https://media.quangninh.gov.vn/618ca5c4-79b3-478a-8adb-4184369067f7/Libraries/HinhAnhBaiViet/A%20THUY%20CHAM/bai%20con%20nguoi_bai%20Tet_17012023_4.jpg" alt="">
+            </div>
+            <div id="section2"  class="section">
+              <p>
+                 <h3>2. Thiên nhiên hùng vĩ, thắng cảnh nổi bật</h3>
+                Thiên nhiên Quảng Ninh đa dạng với địa hình biển đảo, đồng bằng, trung du và miền núi. Những thắng cảnh nổi bật gồm vịnh Hạ Long, quần đảo Cô Tô, bãi tắm Trà Cổ, Vườn quốc gia Bái Tử Long. Khu vực trung du có hồ Yên Lập, thác Lựng Xanh, thác Mơ… Khu vực đồi núi nổi tiếng với rừng nguyên sinh Yên Tử và Khu bảo tồn Đồng Sơn - Kỳ Thượng. 
+              </p>
+              <img  src="https://i2.ex-cdn.com/crystalbay.com/files/content/2024/07/30/du-lich-ha-long-1-1133.jpg" alt="">
+            </div>
+            <div id="section3" class="section">
+             <p> <h3>3. Hệ thống di tích phong phú</h3>
+              Quảng Ninh sở hữu hệ thống di tích phong phú với hơn 600 di tích được kiểm kê, trong đó hơn 100 di tích được xếp hạng. Đặc biệt, 8 di tích được công nhận là Di tích quốc gia đặc biệt như khu di tích nhà Trần (Đông Triều), khu danh thắng Yên Tử, vịnh Hạ Long, đình Trà Cổ... Công tác bảo tồn, trùng tu các di tích luôn được quan tâm để gìn giữ giá trị lịch sử, văn hóa.
+              </p>
+              <img  src="https://media.vneconomy.vn/w800/images/upload/2023/10/25/van-don.jpg" alt="">
+            </div>
+            <div id="section4" class="section">
+             <p> <h3>4. Hệ thống công trình văn hóa hiện đại</h3>
+              Bên cạnh các di tích, Quảng Ninh còn có nhiều công trình văn hóa hiện đại như Bảo tàng - Thư viện Quảng Ninh, Công viên hoa Hạ Long, Quảng trường 30/10, Cột đồng hồ, Cung Quy hoạch, Hội chợ và Triển lãm tỉnh… Những công trình này góp phần tạo nên diện mạo văn hóa hiện đại cho địa phương.
+              </p>
+              <img src="https://viettour3mien.vn/wp-content/uploads/2023/06/Quang-truong-Ha-Long-1.jpg" alt="">
+            </div>
+            <div id="section5" class="section">
+            <p> <h3>5. Văn hóa công nhân mỏ đặc trưng </h3>
+              Một nét đặc sắc riêng của Quảng Ninh là văn hóa công nhân mỏ, hình thành và phát triển suốt 150 năm qua. Văn hóa vùng mỏ là sự kết hợp giữa truyền thống và văn hóa công nghiệp hiện đại, phản ánh tinh thần lao động, sáng tạo của người dân nơi đây.
+              </p>
+              <img  src="https://media.quangninh.gov.vn/318f7644-d326-49ef-82e2-b612b5bb7dac/Libraries/HinhAnhBaiViet/Bat/N%C4%83m%202024/2.9/N%C6%A1i%20ghi%20d%E1%BA%A5u%20tinh%20th%E1%BA%A7n%20b%E1%BA%A5t%20khu%E1%BA%A5t%20c%E1%BB%A7a%20th%E1%BB%A3%20m%E1%BB%8F3.jpg" alt="">
+            </div>
+            <div id="section6" class="section">
+             <p> <h3>6. Di sản văn hóa phi vật thể phong phú </h3>
+              Di sản văn hóa phi vật thể của Quảng Ninh rất phong phú với hơn 2.800 hồ sơ được ghi nhận. Tỉnh có 64 lễ hội truyền thống tiêu biểu như lễ hội cấp sắc của dân tộc Dao, lễ hội đình Trà Cổ, lễ hội Bạch Đằng... Bên cạnh đó, nghệ thuật dân gian như hát “đúm” làng chài Cửa Vạn, hát nhà tơ, hát múa cửa đình vẫn được bảo tồn và phát huy. Đặc biệt, nghi lễ Then của người Tày ở Bình Liêu đã được UNESCO công nhận là Di sản văn hóa phi vật thể của nhân loại vào năm 2019.
+              </p>
+              <img  src="https://bvhttdl.mediacdn.vn/291773308735864832/2024/1/22/e1baadt20the1bb8320qu1-1705886732133-1705886735114809288373.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="container1">
+          <div style="font-size: 25px;" class="title">Điểm đến được yêu thích</div>
+    
+          <div class="image-container">
+           <a href="khuvuichoi.htm"> <img src="ảnh trang chủ 6-01.png" alt="Vịnh Hạ Long" /></a>
+            <p class="text-overlay">
+              Nhắc đến những địa điểm tham quan hấp dẫn ở Quảng Ninh, không thể
+              không nhắc đến Vịnh Hạ Long - một trong bảy kỳ quan thiên nhiên thế
+              giới được UNESCO công nhận.
+            </p>
+          </div>
+    
+          <div style="height: 30px"></div>
+          <div class="image-container">
+           <a href="khuvuichoi.htm"><img
+              src="https://ik.imagekit.io/tvlk/blog/2022/08/dao-tuan-chau-2.jpg"
+              alt="Bán đảo Tuần Châu"
+            /> </a> 
+            <p class="text-overlay">
+              Bán đảo Tuần Châu là điểm du lịch quyến rũ với bãi biển nhân tạo dài
+              hơn 6km, làn nước trong xanh và cát trắng mịn.
+            </p>
+          </div>
+          <div style="height: 30px"></div>
+          <div class="image-container">
+           <a href="khuvuichoi.htm"><img src="https://image.vietgoing.com/destination/large/vietgoing_edk2101223239.webp" alt=""></a> 
+            <p class="text-overlay">Cô Tô là một trong những hòn đảo đẹp nhất miền Bắc, nổi bật với vẻ đẹp hoang sơ và thiên nhiên thơ mộng. Quần đảo này bao gồm hơn 50 đảo lớn nhỏ và đảo ngầm, là điểm đến lý tưởng cho những ai yêu thích biển xanh, cát trắng.
+            </p>
+          </div>
+          <div style="height: 30px"></div>
+          <div class="image-container">
+           <a href="khuvuichoi.htm"> <img src="https://baoxaydung.com.vn/stores/news_dataimages/thuylinh/062018/17/16/164048baoxaydung_image003.jpg" alt=""></a>
+            <p class="text-overlay">Cẩm Phả không chỉ nổi tiếng với ngành công nghiệp than mà còn là điểm đến có cảnh quan thiên nhiên sơn thủy hữu tình. Nơi đây sở hữu nhiều bãi biển đẹp và các đảo đá vôi hùng vĩ như đảo Rều – nơi sinh sống của hàng ngàn con khỉ, hay vịnh Bái Tử Long với những hòn đảo hoang sơ tuyệt đẹp.
+            </p>
+          </div>
+          <div style="height: 30px"></div>
+          <div class="image-container">
+            <a href="khuvuichoi.htm"><img src="https://i2.ex-cdn.com/crystalbay.com/files/content/2024/08/16/khu-di-tich-yen-tu-4-1516.jpg" alt=""></a>
+            <p class="text-overlay">Yên Tử được mệnh danh là vùng đất Phật linh thiêng, nơi gắn liền với sự ra đời của Thiền phái Trúc Lâm. Khu du lịch Yên Tử sở hữu hệ thống chùa chiền với kiến trúc cổ kính, đặc biệt là chùa Trình – điểm dừng chân đầu tiên trong hành trình lên núi.
+            </p>
+          </div>
+          <div style="height: 30px"></div>
+          <div class="image-container">
+            <a href="khuvuichoi.htm"><img src="https://ik.imagekit.io/tvlk/blog/2022/10/kinh-nghiem-du-lich-bai-chay-1.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2" alt=""></a>
+            <p class="text-overlay">Bãi Cháy là bãi biển rộng nhất Hạ Long, với bờ cát trắng trải dài hơn 1km, nước biển trong xanh và hệ thống khu vui chơi giải trí hiện đại. Du khách có thể tham gia nhiều hoạt động thú vị như thuê xe đạp dạo biển, lướt sóng, chèo thuyền kayak...
+            </p>
+          </div>
+          <div style="height: 30px"></div>
+          <div class="image-container">
+            <a href="khuvuichoi.htm"><img src="https://static.vinwonders.com/production/bien-van-don-1.jpeg" alt=""></a>
+            <p class="text-overlay">Vân Đồn là một quần thể bãi biển trải dài, giữ được vẻ đẹp hoang sơ nhưng đầy quyến rũ. Trong đó, bãi Dài là địa điểm nổi bật, nằm cách Hạ Long khoảng 50km, được đầu tư mạnh mẽ nhưng vẫn giữ nguyên vẻ đẹp tự nhiên.
+            </p>
+          </div>
+          <div style="height: 30px"></div>
+          <div class="image-container">
+          <a href="khuvuichoi.htm"> <img src="https://i2.ex-cdn.com/crystalbay.com/files/content/2024/08/28/bai-bien-tra-co-1-1011.jpg" alt=""></a> 
+            <p class="text-overlay">Biển Trà Cổ, thuộc Móng Cái, là một trong những bãi biển đẹp nhất Việt Nam, với đường bờ biển dài hơn 17km. Được bao bọc bởi rừng ngập mặn và những rặng phi lao xanh mát, nơi đây mang đến khung cảnh thiên nhiên hoang sơ và bình yên.
+            </p>
+          </div>
+        </div> 
+        <div class="container2">
+          <div style="font-size: 25px;color: #119c50;" class="title">Tin tức mới nhất</div>
+          <div class="doanh">
+           <a href="tintuc.htm"> <img class="news-image" src="https://www.homepaylater.vn/static/7b412f864b0d98603b9241aba9bd69c2/1_tra_co_co_bai_bien_dai_va_bo_cat_trang_min_164a5a3d5b.jpg" alt="" /></a>
+            <p class="news-text">
+              Biển Trà Cổ, thuộc Móng Cái, là một trong những bãi biển đẹp nhất
+              Việt Nam, với đường bờ biển dài hơn 17km. Được bao bọc bởi rừng
+              ngập mặn và những rặng phi lao xanh mát, nơi đây mang đến khung
+              cảnh thiên nhiên hoang sơ và bình yên.
+            </p>
+          </div>
+          <div style="height: 20px;"></div>
+          <div class="doanh">
+           <a href="tintuc.htm"> <img class="news-image" src="https://res.klook.com/image/upload/q_85/c_fill,w_750/v1685528340/lmb4qqizhcwpnwh6eoca.jpg" alt="" /></a>
+            <p class="news-text">
+              Các cơ quan chức năng đã tăng cường công tác kiểm tra và hỗ trợ du khách nhằm đảm bảo một môi trường du lịch an toàn và thân thiện.
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div style="height: 30px;"></div>
+    <div class="tren">
+      <h2>Đăng kí nhận tư vấn</h2>
+      <p style="text-indent: 35px;">Quý khách vui lòng liên hệ trực tiếp <b>HOTLINE TƯ VẤN 24/7:</b> 1900 33 36 14 hoặc cung cấp nội dung theo biểu mẫu dưới 
+      ,nhân viên tư vấn của Quảng Ninh Travel sẽ liên lạc để tư vấn trong thời gian lớn nhất .</p>
+      <div class="than">
+        <div class="giua1">
+          <input style="border-radius: 20px;" type="text" placeholder="Họ và tên" />
+          <input style="border-radius: 20px;" type="tel" placeholder="Số điện thoại" />
+          <input style="border-radius: 20px;" type="email" placeholder="Email" />
+        </div>
+        <div style="width: 40%;" class="dki">
+          <input  style="width: 100%;border-radius: 20px;height: 70%;margin-top: 5%;" type="text" placeholder="Nội dung tư vẫn" />
+        </div>
+      </div>
+      <button style="font-size: 20px; text-align: center; background-color: rgb(244, 82, 82);margin-left: 35%;margin-right: 35%;color: white;
+      border-radius: 10px;">ĐĂNG KÝ TƯ VẤN</button>
+      <p style="font-size: 23px;color: grey;text-align: center;">Bằng cách nhấn đăng kí tư vấn, bạn xác nhận đã đọc và đồng ý với chính sách bảo vệ dữ liệu cá nhân của chúng tôi!</p>
+  </div>
+  <h1 style="font-style: italic;margin-left: 10%;color: gray;">Hãy đồng hành cùng Quảng Ninh Travel</h1>
+  <div style="height: 30px;"></div>
+    <div class="icon">
+        <div>
+          <i class="fa-brands fa-facebook"></i
+          ></a>
+        </div>
+        <div>
+          <i class="fa-brands fa-twitter"> </i>
+        </div>
+        <div>
+          <i class="fa-brands fa-google"></i> </a>
+        </div>
+        <div><i class="fa-solid fa-print"></i></div>
+        <div><i class="fa-brands fa-instagram"></i></div>
+      </div> 
+      
+      <div class="cuoi">
+        <div class="row row-2">
+          <div class="col-lg-4">
+            <img class="footer-logo" src="ảnh logo ko nền-01.png" alt="Logo">
+          </div>
+          <div class="col-lg-4 contact-info">
+            <h3>Liên Hệ</h3>
+            <p>Địa chỉ: Số 27 đường Trần Quốc Toàn, thành phố Quảng Ninh</p>
+            <h3>Email: QuangNinhtravling27@gmail.com</h3>
+            <p>SĐT: 0373542892</p>
+            <p>Hotline: 1900333634</p>
+            <h3>Website: <a href="https://QuangNinh27travling" target="_blank">QuangNinh27travling</a></h3>
+          </div>
+          <div class="col-lg-4 payment-method">
+            <div>
+              <img class="payment-logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+              <img class="payment-logo" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Former_Visa_%28company%29_logo.svg" alt="Visa">
+            </div>
+          </div>
+        </div>
+      
+        <div class="manhinh" style="display: flex;color: white;justify-content: space-between;">
+          <div>© Bản quyền thuộc về Quảng Ninh Travel</div>
+          <div>Đang truy cập: 1477</div>
+          <div>Tổng số người truy cập: 1.231.456</div>
+        </div>
+      </div>
+      
+    <!-- Bootstrap JS (kèm Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
+<script>
+  const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+  if (isLoggedIn === "true") {
+    alert("Đăng nhập thành công");
+    sessionStorage.removeItem("isLoggedIn");
+  }
+</script>
+

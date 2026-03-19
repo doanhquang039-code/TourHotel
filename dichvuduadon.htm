@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <!-- Nhúng online -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+     
+     
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .tsa {
+        background-image: url("z6426123574950_9c154261f2f5387487a8ea74144affaf.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 630px;
+      }
+      .container11 {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 24px;
+        padding: 24px;
+      }
+
+      .filter-section {
+        background: #fff;
+        border-radius: 12px;
+        padding: 16px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .filter-section h3 {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      .filter-section h4 {
+        margin: 12px 0 8px;
+      }
+
+      .filter-section input {
+        margin-right: 8px;
+      }
+
+      .car-list-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; 
+      }
+
+      .car-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 16px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        transition: transform 0.3s ease;
+      }
+
+      .car-card:hover {
+        transform: translateY(-4px);
+      }
+
+      .car-card h2 {
+        margin: 0;
+        font-size: 20px;
+        color: #333;
+      }
+
+      .car-card p {
+        margin: 8px 0;
+        color: #555;
+      }
+
+      .car-card .s {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .car-card button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .car-card button:hover {
+        background: #0056b3;
+      }
+
+      @media (max-width: 768px) {
+        /* Đảm bảo giao diện lọc bên trái có thể kéo dài hết chiều ngang */
+        .container {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .filter-section {
+          padding: 12px; /* Giảm padding để tiết kiệm không gian */
+        }
+
+        .car-card {
+          flex-direction: column; 
+          padding: 12px;
+          align-items: center; 
+          text-align: center;
+        }
+
+        .car-card button {
+          width: 100%; 
+        }
+
+        .car-card .s p {
+          font-size: 14px; 
+        }
+
+        .car-list-section {
+          display: flex;
+          flex-direction: column; /* Đảm bảo các thẻ xe nằm dọc nhau */
+          gap: 20px;
+        }
+
+    
+        .car-card h2 {
+          font-size: 18px;
+        }
+      }
+    
+     
+      .huong {
+        display: flex;
+        justify-content: space-between;
+        font-size: 25px;
+      }
+     
+      .s {
+        display: flex;
+        gap: 20px;
+        font-size: 22px;
+      }
+     
+      .container12 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+margin: auto;
+  background-color: #85e8e8;
+}
+      
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container12">
+        <div class="logo">
+          <img src="ảnh logo ko nền-01.png" alt="Logo" />
+        </div>
+        <nav class="menu" style="font-family: Calibri;">
+          <a href="index.html">Trang Chủ</a>
+          <a href="khuvuichoi.htm">Điểm đến</a>
+          <a href="amthuc.htm">Ẩm Thực</a>
+          <a href="dichvu.htm">Dịch Vụ</a>
+          <a href="tintuc.htm">Tin Tức</a>
+          <a href="lienhe.htm">Liên Hệ</a>
+          <a href="dangnhap.htm">Đăng nhập</a>
+          <a href="danhsachdichvu.htm" class="">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </nav>
+        <div class="right-section">
+          <div class="search-box">
+            <input type="text" placeholder="Tìm Kiếm ..." />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <a id="b" href="dangky.htm"><i class="fa-solid fa-user"></i></a>
+          <img src="snapedit_1742031043256.png" class="flag" />
+          <img src="snapedit_1742031055763.png" class="flag" />
+        </div>
+      </div>
+    </header>
+    <div class="tsa">
+      <h2 style="text-align: center;background-color: #88cd83;">Quảng Ninh - Điểm đến hấp dẫn</h2>
+    
+      <div class="doanh">
+        <div class="doanh1">
+          <a href="dichvu.htm"><button><i class="fa-solid fa-building"></i> Khách sạn</button></a>
+        </div>
+        <div class="doanh1">
+          <a href="dichvuduadon.htm"><button><i class="fa-solid fa-car-side"></i> Xe đưa đón</button></a>
+        </div>
+        <div class="doanh1">
+          <a href="dichvudatxe.htm"><button><i class="fa-solid fa-car"></i> Cho thuê xe</button></a>
+        </div>
+        <div class="doanh1">
+          <a href="dichvunhahang.htm"><button><i class="fa-solid fa-bowl-food"></i> Nhà hàng</button></a>
+        </div>
+        <div class="doanh1">
+          <button><i class="fa-solid fa-suitcase-rolling"></i> Đặt Tour</button>
+        </div>
+      </div>
+    
+      <hr style="margin: 50px auto; width: 80%; height: 5px; background-color: rgba(255,255,255,0.2); border: none;" />
+    
+      <div class="tsa-search">
+        <!-- Hàng tiêu đề -->
+        <div class="tsa-row">
+          <div class="tsa-col"><h3>Từ</h3></div>
+          <div class="tsa-col"><h3>Đến</h3></div>
+          <div class="tsa-col"><h3>Ngày khởi hành</h3></div>
+          <div class="tsa-col"><h3>Ngày khử hồi</h3></div>
+          <div class="tsa-col"><h3>Số lượng ghế</h3></div>
+        </div>
+      
+        <!-- Hàng nhập dữ liệu -->
+        <div class="tsa-row">
+          <div class="tsa-col">
+            <i class="fa-solid fa-map-marker-alt"></i> Hà Nội
+          </div>
+          <div class="tsa-col">
+            <i class="fa-solid fa-map-marker-alt"></i> Quảng Ninh
+          </div>
+          <div class="tsa-col">
+            <input type="date" />
+          </div>
+          <div class="tsa-col">
+            <input type="date" />
+          </div>
+          <div class="tsa-col">2 Ghế
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    
+    <div style="height: 30px"></div>
+    <div class="huong">
+      <div style="margin-left: 70px">
+        <h2>Hà Nội-Quảng Ninh</h2>
+        <p><input style="border-radius: 20px;" type="date" name="" id=""></p>
+        <p>2 ghế ngồi</p>
+      </div>
+      <div>
+        <select style="background-color: #88cd83;border-radius: 20px;margin-right: 90px;height: 60px;" onchange="window.location.href=this.value;">
+          <option value="#">Thay đổi tìm kiếm</option>
+          <option value="dichvunhahang.htm">Dịch vụ nhà hàng</option>
+          <option value="dichvudatxe.htm">Dịch vụ đặt xe</option>
+          <option value="dichvudattour.htm">Dịch vụ đặt tour</option>
+          <option value="khuvuichoi.htm">Điểm đến du lịch</option>
+      </select>
+      
+      </div>
+    </div>
+    <hr style="background-color: black; border: 5px solid black" />
+    <div style="height: 120px"></div>
+    <div class="container11">
+      <div style="background-color: rgb(220, 237, 159);font-size: 20px;" class="filter-section">
+        <h3>Chọn lọc theo</h3>
+        <hr />
+        <button id="apply-filters" class="btn btn-primary">Lọc</button>
+        <a href="dichvuduadon.htm"><button style="background-color: #007bff; border-radius: 20px">Xóa chọn lọc</button></a>
+      
+        <h4>Hãng xe</h4>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="Cua Ong Limomicrit" /> Cua Ong Limomicrit</label><br />
+        <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="Mai Hương Limomicrit" /> Mai Hương Limomicrit</label><br />
+        <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="Phuc Xuyen" /> Phuc Xuyen</label><br />
+        <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="Trung Thanh Omlimpic" /> Trung Thanh Omlimpic</label><br />
+        <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="Aya Omlimpic" /> Aya Omlimpic</label>
+    
+        <hr />
+        <h4>Loại ghế</h4>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="seat" value="Phổ thông" /> Phổ thông</label><br />
+        <label><input type="checkbox" class="filter-checkbox" data-filter="seat" value="Cao cấp" /> Cao cấp</label><br />
+        <label><input type="checkbox" class="filter-checkbox" data-filter="seat" value="Bình dân" /> Bình dân</label>
+    
+        <hr />
+        <h4>Tiện ích</h4>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="amenities" value="Máy điều hòa" /> Máy điều hòa</label><br />
+        <label><input type="checkbox" class="filter-checkbox" data-filter="amenities" value="Wifi" /> Wifi</label><br />
+        <label><input type="checkbox" class="filter-checkbox" data-filter="amenities" value="Nước khoáng" /> Nước khoáng</label><br />
+        <label><input type="checkbox" class="filter-checkbox" data-filter="amenities" value="Dầu cắm sạc" /> Dầu cắm sạc</label><br />
+        <label><input type="checkbox" class="filter-checkbox" data-filter="amenities" value="Ghế massage" /> Ghế massage</label>
+    
+        <hr />
+        <h4>Loại xe</h4>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="vehicle" value="Giường nằm" /> Giường nằm</label><br />
+        <label><input type="checkbox" class="filter-checkbox" data-filter="vehicle" value="Cabin 24 phòng" /> Cabin 24 phòng</label><br />
+        <label><input type="checkbox" class="filter-checkbox" data-filter="vehicle" value="Limousine 9 chỗ" /> Limousine 9 chỗ</label><br />
+        <label><input type="checkbox" class="filter-checkbox" data-filter="vehicle" value="Limousine 16 chỗ" /> Limousine 16 chỗ</label>
+    
+        <hr />
+        <h4>Đánh giá của khách hàng</h4>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="rating" value="9" /> Tuyệt vời: 9 điểm trở lên</label><br />
+        <label><input type="checkbox" class="filter-checkbox" data-filter="rating" value="8" /> Rất tốt: 8 điểm trở lên</label><br />
+        <label><input type="checkbox" class="filter-checkbox" data-filter="rating" value="7" /> Tốt: 7 điểm trở lên</label><br />
+        <label><input type="checkbox" class="filter-checkbox" data-filter="rating" value="6" /> Tạm ổn: 6 điểm trở lên</label>
+    </div>
+    
+    <div id="car-list" class="car-list-section" >
+      <div class="car-card" 
+     data-brand="Cua Ong Limomicrit" 
+     data-seat="Phổ thông" 
+     data-vehicle="Omlimpic 9 chỗ" 
+     data-amenities="Máy điều hòa,Wifi,Nước khoáng" 
+     data-rating="9" style="background-color:rgb(106, 236, 236) ;">
+        <div>
+          <h2>Cua Ong Limomicrit</h2>
+          <p>Omlimpic 9 chỗ - Ghế phổ thông</p>
+          <h4>19:00 → 22:35</h4>
+          <div class="s">
+            <p>Văn phòng số 2 Nguyễn Hoàng</p>
+            <p>Cẩm Phả</p>
+          </div>
+        </div>
+        <div style="text-align: center">
+          <h4>| 3 tiếng 35 phút |</h4>
+        </div>
+        <div style="text-align: center">
+          <h2 style="color: green">VND 270,000 / Khách</h2>
+          <a href="vanphongso1.htm"><button>Đặt vé</button></a>
+        </div>
+      </div>
+      <div style="background-color: rgb(214, 237, 131); font-size: 25px;" 
+      class="car-card"
+      data-brand="Phuc Xuyen" 
+      data-seat="Hạng trung" 
+      data-vehicle="Omlimpic 9 chỗ" 
+      data-amenities="Máy điều hòa,Wifi,Ghế massage" 
+      data-rating="8">
+        <div>
+          <h2>Phúc Xuyên</h2>
+          <p>Omlimpic 9 chỗ - Ghế hạng trung</p>
+          <h4>11:00 → 13:15</h4>
+          <div class="s">
+            <p>Bến Xe Mỹ Đình</p>
+            <p>Móng Cái</p>
+          </div>
+        </div>
+        <div style="text-align: center">
+          <h4>| 2 tiếng 15 phút |</h4>
+        </div>
+        <div style="text-align: center">
+          <h2 style="color: green">VND 290,000 / Khách</h2>
+          <a href="vanphongso1.htm"><button>Đặt vé</button></a>
+        </div>
+      </div>
+    
+      <div style="background-color: rgb(99, 237, 200); font-size: 25px;" 
+      class="car-card"
+      data-brand="Trung Thanh Omlimpic" 
+      data-seat="Hạng trung" 
+      data-vehicle="Giường nằm" 
+      data-amenities="Máy điều hòa,Nước khoáng" 
+      data-rating="7">
+        <div>
+          <h2>Trung Thanh Omlimpic</h2>
+          <p>Giường nằm - Ghế hạng trung</p>
+          <h4>16:00 → 20:25</h4>
+          <div class="s">
+            <p>Nhà Hát Lớn</p>
+            <p>Cảng Cái Rồng</p>
+          </div>
+        </div>
+        <div style="text-align: center">
+          <h4>| 4 tiếng 25 phút |</h4>
+        </div>
+        <div style="text-align: center">
+          <h2 style="color: green">VND 350,000 / Khách</h2>
+          <a href="vanphongso1.htm"><button>Đặt vé</button></a>
+        </div>
+      </div>
+    
+      <div style="background-color: rgb(78, 227, 105); font-size: 25px;" 
+      class="car-card"
+      data-brand="Doanh Omlimpic" 
+      data-seat="Cao cấp " 
+      data-vehicle="Omlimpic 9 chỗ" 
+      data-amenities="Máy điều hòa,Nước khoáng" 
+      data-rating="8">
+        <div>
+          <h2>Doanh Omlimpic</h2>
+          <p>Omlimpic 9 chỗ - Ghế cao cấp</p>
+          <h4>10:00 → 12:35</h4>
+          <div class="s">
+            <p>Phố Nhổn</p>
+            <p>Cẩm Phả</p>
+          </div>
+        </div>
+        <div style="text-align: center">
+          <h4>| 2 tiếng 35 phút |</h4>
+        </div>
+        <div style="text-align: center">
+          <h2 style="color: green">VND 770,000 / Khách</h2>
+          <a href="nhahatlondatxe.htm"><button>Đặt vé</button></a>
+        </div>
+      </div>
+    
+      <div style="background-color: rgb(131, 201, 55); font-size: 25px;" 
+      class="car-card"
+      data-brand="Aya Omlimpic" 
+      data-seat="Phổ thông" 
+      data-vehicle="Giường nằm" 
+      data-amenities="Máy điều hòa,Nước khoáng" 
+      data-rating="8">
+        <div>
+          <h2>Aya Omlimpic</h2>
+          <p>Omlimpic 9 chỗ - Ghế phổ thông</p>
+          <h4>10:00 → 12:35</h4>
+          <div class="s">
+            <p>Phố Nhổn</p>
+            <p>Cẩm Phả</p>
+          </div>
+        </div>
+        <div style="text-align: center">
+          <h4>| 2 tiếng 35 phút |</h4>
+        </div>
+        <div style="text-align: center">
+          <h2 style="color: green">VND 770,000 / Khách</h2>
+          <a href="nhahatlondatxe.htm"><button>Đặt vé</button></a>
+        </div>
+      </div>
+      <div style="background-color: rgb(214, 237, 131); font-size: 25px;" 
+      class="car-card"
+      data-brand="Mai Hương Omlimpic" 
+      data-seat="Cao cấp " 
+      data-vehicle="Giường nằm" 
+      data-amenities="Máy điều hòa,Nước khoáng" 
+      data-rating="8">
+        <div>
+          <h2>Mai Hương Omlimpic</h2>
+          <p>Omlimpic 9 chỗ - Ghế cao cấp</p>
+          <h4>10:00 → 12:35</h4>
+          <div class="s">
+            <p>Phố Từ Liêm</p>
+            <p>Vịnh Hạ Long</p>
+          </div>
+        </div>
+        <div style="text-align: center">
+          <h4>| 2 tiếng 35 phút |</h4>
+        </div>
+        <div style="text-align: center">
+          <h2 style="color: green">VND 370,000 / Khách</h2>
+          <a href="vanphongso1.htm"><button>Đặt vé</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    
+    <div style="height: 30px"></div>
+    <div class="icon">
+      <div>
+        <i class="fa-brands fa-facebook"></i
+        ></a>
+      </div>
+      <div>
+        <i class="fa-brands fa-twitter"> </i>
+      </div>
+      <div>
+        <i class="fa-brands fa-google"></i> </a>
+      </div>
+      <div><i class="fa-solid fa-print"></i></div>
+      <div><i class="fa-brands fa-instagram"></i></div>
+    </div> 
+    <div class="cuoi">
+      <div class="row row-2">
+        <div class="col-lg-4">
+          <img class="footer-logo" src="ảnh logo ko nền-01.png" alt="Logo">
+        </div>
+        <div class="col-lg-4 contact-info">
+          <h3>Liên Hệ</h3>
+          <p>Địa chỉ: Số 27 đường Trần Quốc Toàn, thành phố Quảng Ninh</p>
+          <h3>Email: QuangNinhtravling27@gmail.com</h3>
+          <p>SĐT: 0373542892</p>
+          <p>Hotline: 1900333634</p>
+          <h3>Website: <a href="https://QuangNinh27travling" target="_blank">QuangNinh27travling</a></h3>
+        </div>
+        <div class="col-lg-4 payment-method">
+          <div>
+            <img class="payment-logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+            <img class="payment-logo" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Former_Visa_%28company%29_logo.svg" alt="Visa">
+          </div>
+        </div>
+      </div>
+    
+      <div class="manhinh" style="display: flex;color: white;justify-content: space-between;">
+        <div>© Bản quyền thuộc về Quảng Ninh Travel</div>
+        <div>Đang truy cập: 1477</div>
+        <div>Tổng số người truy cập: 1.231.456</div>
+      </div>
+    </div>
+    
+  </body>
+</html>
+<script>
+  document.getElementById("apply-filters").addEventListener("click", function () {
+    var selectedBrands = [];
+    var selectedSeats = [];
+    var selectedVehicles = [];
+    var selectedRatings = [];
+    var checkboxes = document.querySelectorAll(".filter-checkbox:checked");
+    for (var i = 0; i < checkboxes.length; i++) {
+      var type = checkboxes[i].dataset.filter;
+      var value = checkboxes[i].value;
+      if (type === "brand") selectedBrands.push(value);
+      else if (type === "seat") selectedSeats.push(value);
+      else if (type === "vehicle") selectedVehicles.push(value);
+      else if (type === "rating") selectedRatings.push(value);
+    }
+    var cars = document.querySelectorAll(".car-card");
+    for (var j = 0; j < cars.length; j++) {
+      var car = cars[j];
+      var match = true;
+      if (selectedBrands.length > 0 && !selectedBrands.includes(car.dataset.brand)) {
+        match = false;
+      }
+      if (selectedSeats.length > 0 && !selectedSeats.includes(car.dataset.seat)) {
+        match = false;
+      }
+      if (selectedVehicles.length > 0 && !selectedVehicles.includes(car.dataset.vehicle)) {
+        match = false;
+      }
+      if (selectedRatings.length > 0) {
+        var carRating = Number(car.dataset.rating);
+        var pass = false;
+        for (var r = 0; r < selectedRatings.length; r++) {
+          if (carRating >= Number(selectedRatings[r])) {
+            pass = true;
+            break;
+          }
+        }
+        if (!pass) match = false;
+      }
+      car.style.display = match ? "block" : "none";
+    }
+  });
+  </script>
+  

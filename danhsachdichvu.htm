@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh Sách Dịch Vụ</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f7fa;
+        padding: 20px;
+        color: #333;
+      }
+
+      h2 {
+        color: #007bff;
+        margin-bottom: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #007bff;
+        margin-right: 15px;
+        font-weight: bold;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      #order-summary {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin-top: 20px;
+      }
+
+      #order-summary p {
+        margin: 8px 0;
+        font-size: 16px;
+      }
+
+      .order-item {
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+      }
+
+      strong {
+        color: #555;
+      }
+
+      @media (max-width: 600px) {
+        #order-summary {
+          padding: 15px;
+        }
+
+        #order-summary p {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Danh sách các đơn đã đặt</h2>
+    <a href="index.html">Quay về trang chủ</a>
+    <a href="dichvu.htm">Dịch vụ</a>
+
+    <div id="order-summary"></div>
+
+    <script>
+      const orders = JSON.parse(sessionStorage.getItem("orders")) || [];
+      const userName = sessionStorage.getItem("userName"); // lấy tên người dùng khi đăng nhập
+      const orderDiv = document.getElementById("order-summary");
+
+      if (orders.length === 0) {
+        orderDiv.innerText =
+          "Không có thông tin đặt dịch vụ.Lưu ý bạn có thể thanh toán khi trải nghiệm xong dịch vụ.";
+      } else {
+        let content = "";
+        for (let i = 0; i < orders.length; i++) {
+          const o = orders[i];
+          content += "<p><strong>Đơn " + (i + 1) + "</strong></p>";
+          content += "<p>Tên khách sạn/Tên khách sạn: " + o.hotelName + "</p>";
+          content += "<p>Tên phòng/Tên bàn: " + o.roomName + "</p>";
+          content += "<p>Số phòng/Số bàn: " + o.numRooms + "</p>";
+          content += "<p>Số ngày: " + o.numDays + "</p>";
+          content += "<p>Thanh toán: " + o.paymentMethod + "</p>";
+          content += "<p>Voucher: " + o.voucher + "</p>";
+          content += "<hr>";
+        }
+        orderDiv.innerHTML = content;
+      }
+    </script>
+  </body>
+</html>

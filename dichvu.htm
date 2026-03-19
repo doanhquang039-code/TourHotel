@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Nhúng online -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    
+    <link rel="stylesheet" href="style1.css">
+
+    <title>BTL TK WEB NHÓM ?</title>
+    <style>
+     
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .tsa {
+        background-image: url("z6426123574950_9c154261f2f5387487a8ea74144affaf.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 630px;
+      }
+      .doanh p {
+        flex: 1;
+        font-size: 16px;
+      }
+      .menu i {
+        color: #555;
+      }
+      
+     
+      
+      .doanh1 i {
+        margin-right: 20px;
+        padding: 25px 0px 25px ;
+        width: 40px;
+      }
+    
+      .icon{
+      display: flex;
+        font-size: 30px;
+        gap: 20px;
+        background-color: black;
+      color: white;
+      height: 50px;
+    
+      }
+      .tsa1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 0 auto 24px ;
+ background-color: aquamarine;
+  align-items: center;
+  max-width: 1200px;
+  margin-right: 320px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bóng nhẹ ban đầu */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+  
+}
+
+.tsa1:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Bóng đậm khi hover */
+  transform: translateY(-8px); /* Đẩy phần tử lên một chút khi hover */
+}
+
+.tsa1 img {
+  width: 320px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng cho ảnh */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Bóng nhẹ cho ảnh */
+}
+
+.tsa1 img:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Bóng đậm hơn khi hover */
+}
+
+.tsa1 .hotel-info {
+  flex: 1;
+  min-width: 280px;
+  box-sizing: border-box; /* Đảm bảo phần tử này không gây tràn */
+}
+
+.tsa1 .hotel-info h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #333;
+}
+
+.tsa1 .hotel-info h3 {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #666;
+}
+
+.tsa1 .hotel-info p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #444;
+  line-height: 1.5;
+}
+
+.tsa1 .hotel-action {
+  text-align: center;
+  min-width: 200px;
+}
+
+.tsa1 .hotel-action h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.tsa1:hover .hotel-info h2,
+.tsa1:hover .hotel-info h3,
+.tsa1:hover .hotel-info p {
+  color: #007bff; /* Thay đổi màu chữ khi hover */
+}
+
+.tsa1 .hotel-action button, 
+.tsa1 .hotel-action a {
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Hiệu ứng cho nút */
+}
+
+.tsa1 .hotel-action button:hover, 
+.tsa1 .hotel-action a:hover {
+  background-color: #007bff; 
+  transform: translateY(-3px); /* Di chuyển nhẹ lên khi hover */
+  color: #fff; /* Đổi màu chữ khi hover */
+}
+
+
+  .tsa1 .hotel-action .score-btn {
+    background-color: chartreuse;
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-weight: bold;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .tsa1 .hotel-action h5 {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #666;
+  }
+
+  .tsa1 .hotel-action .price {
+    color: chartreuse;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .tsa1 .hotel-action .book-btn {
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 160px;
+    font-size: 18px;
+    padding: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .tsa1 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .tsa1 img {
+      width: 100%;
+      height: auto;
+    }
+
+    .tsa1 .hotel-action {
+      width: 100%;
+      text-align: left;
+    }
+
+    .tsa1 .book-btn {
+      width: 100%;
+    }
+  }
+      .voucher-container {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
+      .voucher {
+        width: 600px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 15px;
+        background: #f8f8f8;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .voucher h3 {
+        font-size: 28px;
+        margin-bottom: 5px;
+      }
+      .voucher p {
+        font-size: 34px;
+        color: gray;
+        margin-bottom: 15px;
+      }
+      .voucher button {
+        background: #89a88f;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+      }
+
+
+      .doanh {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: center;
+  padding: 20px;
+}
+
+.doanh1 {
+  flex: 1 1 180px; /* Chiều rộng tối thiểu là 180px, tự co giãn */
+  text-align: center;
+}
+
+.doanh1 button {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: white;
+  color: #333;
+ 
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.doanh1 button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+  .doanh1 {
+    flex: 1 1 45%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .doanh1 {
+    flex: 1 1 100%; 
+  }
+}
+
+.tsa11 {
+  display: flex;
+  justify-content: space-around;
+  color: #ddd;
+  margin: 30px 0px 10px 0px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.aaa {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.aa button {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 350px;
+  align-items: center;
+}
+
+.aa button:hover {
+  transform: translateY(-5px);
+  background-color: #f0f0f0;
+}
+
+.aa input[type="date"] {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 12px;
+  padding: 0 10px;
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+.tsa-search {
+  max-width: 1000px;
+  margin: 40px auto;
+  color: white;
+  font-family: Arial, sans-serif;
+  background-color: #0a1215;
+}
+.tsa1 img {
+  width: 100%;
+  max-width: 300px; 
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+.tsa-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 15px;
+  flex-wrap: nowrap;
+}
+
+.tsa-col {
+  flex: 1;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: white;
+}
+
+.tsa-col input[type="date"] {
+  padding: 10px;
+  width: 90%;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  background-color: #fcefd3;
+  color: #333;
+}
+body {
+  overflow-x: hidden; /* Ẩn thanh cuộn ngang */
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+  .tsa-row {
+    flex-direction: column;
+  }
+
+  .tsa-col {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.tsa h2 {
+  text-align: center;
+  font-size: 36px;  /* Tăng kích thước chữ */
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;  /* Đảm bảo chiều rộng bằng với thanh menu */
+}
+
+.container12 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+margin: auto;
+  background-color: #85e8e8;
+}
+      
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container12">
+        <div class="logo">
+          <img src="ảnh logo ko nền-01.png" alt="Logo" />
+        </div>
+
+        <nav class="menu" style="font-family: Calibri;">
+          <a href="index.html">Trang Chủ</a>
+          <a href="khuvuichoi.htm">Điểm đến</a>
+          <a href="amthuc.htm">Ẩm Thực</a>
+          <a href="dichvu.htm">Dịch Vụ</a>
+          <a href="tintuc.htm">Tin Tức</a>
+          <a href="lienhe.htm">Liên Hệ</a>
+          <a href="dangnhap.htm">Đăng nhập</a>
+          <a href="danhsachdichvu.htm" class="">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </nav>
+        <div class="right-section">
+          <div class="search-box">
+            <input type="text" placeholder="Tìm Kiếm ..." />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <a id="b" href="dangky.htm"><i class="fa-solid fa-user"></i></a>
+          <img src="snapedit_1742031043256.png" class="flag" />
+          <img src="snapedit_1742031055763.png" class="flag" />
+        </div>
+      </div>
+    </header>
+    <div class="tsa">
+      <h2 style="text-align: center;background-color: #88cd83;">Quảng Ninh - Điểm đến hấp dẫn</h2>
+    
+      <div class="doanh">
+        <div class="doanh1">
+          <a href="dichvu.htm"><button><i class="fa-solid fa-building"></i> Khách sạn</button></a>
+        </div>
+        <div class="doanh1">
+          <a href="dichvuduadon.htm"><button><i class="fa-solid fa-car-side"></i> Xe đưa đón</button></a>
+        </div>
+        <div class="doanh1">
+          <a href="dichvudatxe.htm"><button><i class="fa-solid fa-car"></i> Cho thuê xe</button></a>
+        </div>
+        <div class="doanh1">
+          <a href="dichvunhahang.htm"><button><i class="fa-solid fa-bowl-food"></i> Nhà hàng</button></a>
+        </div>
+        <div class="doanh1">
+          <a href="dichvudattour.htm"><button><i class="fa-solid fa-suitcase-rolling"></i> Đặt Tour</button></a>
+        </div>
+      </div>
+    
+      <hr style="margin: 50px auto; width: 80%; height: 5px; background-color: rgba(255,255,255,0.2); border: none;" />
+    
+      <div class="tsa-search">
+        <!-- Hàng tiêu đề -->
+        <div class="tsa-row">
+          <div class="tsa-col"><h3>Điểm xuất phát</h3></div>
+          <div class="tsa-col"><h3>Điểm đến</h3></div>
+          <div class="tsa-col"><h3>Số lượng khách - phòng</h3></div>
+        </div>
+      
+        <!-- Hàng nhập dữ liệu -->
+        <div class="tsa-row">
+          <div class="tsa-col">
+            <i class="fa-solid fa-map-marker-alt"></i> Hà Nội
+          </div>
+          <div class="tsa-col">
+            <i class="fa-solid fa-map-marker-alt"></i> Hạ Long Bay
+          </div>
+          <div class="tsa-col">
+            <i class="fa-solid fa-door-closed"></i> 2 người - 1 phòng
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    
+    <div style="height: 140px"></div>
+    <div class="container-fluid">
+      <div class="row d-flex" style="flex-wrap: nowrap;">
+          <!-- Phần lọc -->
+          <div class="col-lg-3 col-md-3 col-3" style="overflow-y: auto; max-height: 100vh; font-size: 20px; background-color: rgb(53, 201, 201); margin-left: 70px;">
+              <h3 style="text-align: center">Chọn lọc theo</h3>
+              <div style="gap: 10px;">
+              <button id="apply-filters" class="btn btn-primary">Lọc</button>
+              <a href="dichvu.htm"><button style="background-color: #007bff;border-radius: 20px;">Xóa chọn lọc</button></a>
+            </div>
+              <hr style="width: 80px" />
+  
+              <!-- Lọc theo sao -->
+              <h4>Xếp hạng sao</h4>
+              <div><input type="checkbox" id="star-1" /> <label for="star-1">7 sao</label></div>
+              <div><input type="checkbox" id="star-2" /> <label for="star-2">8 sao</label></div>
+              <div><input type="checkbox" id="star-3" /> <label for="star-3">6 sao</label></div>
+              <div><input type="checkbox" id="star-4" /> <label for="star-4">9 sao</label></div>
+              <div><input type="checkbox" id="star-5" /> <label for="star-5">5 sao</label></div>
+  
+              <hr />
+  
+              <!-- Lọc theo loại chỗ ở -->
+              <h4>Loại chỗ ở</h4>
+              <div><input type="checkbox" id="type-hotel" /> <label for="type-hotel">Khách sạn</label></div>
+              <div><input type="checkbox" id="type-villa" /> <label for="type-villa">Biệt thự</label></div>
+              <div><input type="checkbox" id="type-inn" /> <label for="type-inn">Nhà nghỉ</label></div>
+              <div><input type="checkbox" id="type-resort" /> <label for="type-resort">Resort</label></div>
+  
+              <hr />
+  
+              <!-- Lọc theo mức giá -->
+              <h4>Mức giá</h4>
+              <div><input type="checkbox" id="price-500-1m" /> <label for="price-500-1m">500,000 - 1 triệu</label></div>
+              <div><input type="checkbox" id="price-1m-2m" /> <label for="price-1m-2m">1 triệu - 2 triệu</label></div>
+              <div><input type="checkbox" id="price-2m-3m" /> <label for="price-2m-3m">2 triệu - 3 triệu</label></div>
+  
+              <hr />
+  
+              <!-- Lọc theo đánh giá khách hàng -->
+              <h4>Đánh giá của khách hàng</h4>
+              <div><input type="checkbox" id="rating-9" /> <label for="rating-9">Tuyệt vời: 9 điểm trở lên</label></div>
+              <div><input type="checkbox" id="rating-8" /> <label for="rating-8">Rất tốt: 8 điểm trở lên</label></div>
+              <div><input type="checkbox" id="rating-7" /> <label for="rating-7">Tốt: 7 điểm trở lên</label></div>
+              <div><input type="checkbox" id="rating-6" /> <label for="rating-6">Tạm ổn: 6 điểm trở lên</label></div>
+          </div>
+
+          <div class="col-lg-9 col-md-9 col-9">
+              <div id="hotel-list">
+                
+                  <div class="tsa1 hotel star-3 type-hotel price-500-1m rating-9">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5FXt03ACgrZDF_vkm16V81T8NfS4OP0k91Q&s" alt="The Light Hotel">
+                      <div class="hotel-info">
+                          <h2>The Light Hotel</h2>
+                          <h3><i class="fa-solid fa-map-marker-alt"></i> Khách sạn ở Bãi Cháy - Hạ Long</h3>
+                          <p>The Light Hotel cung cấp cho bạn chỗ nghỉ, hồ bơi ngoài trời, chỗ đậu xe, vườn và khu sân chơi phòng chờ chung.</p>
+                      </div>
+                      <div class="hotel-action">
+                          <h4>Rất Tốt: 145 đánh giá</h4>
+                          <button class="score-btn">8.2</button>
+                          <div>Giá từ</div>
+                          <div class="price" style="color: black;">VND 500,000</div>
+                          <h5>1 đêm - 2 người</h5>
+                          <a href="phong1.htm"><button class="book-btn">Xem phòng</button></a>
+                      </div>
+                  </div>
+  
+                  <div class="tsa1 hotel star-4 type-resort price-1m-2m rating-8">
+                      <img src="https://ezcloud.vn/wp-content/uploads/2024/03/khach-san-paradise-suites-ha-long-scaled.webp" alt="The Paradise Resort">
+                      <div class="hotel-info">
+                          <h2>The Paradise Resort</h2>
+                          <h3><i class="fa-solid fa-map-marker-alt"></i> Resort ở Quảng Ninh</h3>
+                          <p>The Paradise Resort cung cấp chỗ nghỉ cao cấp, hồ bơi, nhà hàng và các hoạt động ngoài trời thú vị.</p>
+                      </div>
+                      <div class="hotel-action">
+                          <h4>Rất Tốt: 230 đánh giá</h4>
+                          <button class="score-btn">8.7</button>
+                          <div>Giá từ</div>
+                          <div class="price" style="color: black ;">VND 1,500,000</div>
+                          <h5>1 đêm - 2 người</h5>
+                          <a href="phong2.htm"><button class="book-btn">Xem phòng</button></a>
+                      </div>
+                  </div>
+  
+                  <div class="tsa1 hotel star-5 type-villa price-2m-3m rating-7">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKBjGXC1pmiSyDUwInH-zVW7RnLanMaSixow&s" alt="The Tùng Dương Hotel">
+                      <div class="hotel-info">
+                          <h2>The Tùng Dương Hotel</h2>
+                          <h3><i class="fa-solid fa-map-marker-alt"></i> Khách sạn ở Bãi Cháy - Hạ Long</h3>
+                          <p>The Tùng Dương Hotel cung cấp cho bạn chỗ nghỉ, hồ bơi ngoài trời, chỗ đậu xe, vườn và khu sân chơi phòng chờ chung.</p>
+                      </div>
+                      <div class="hotel-action">
+                          <h4>Rất Tốt: 155 đánh giá</h4>
+                          <button class="score-btn">7</button>
+                          <div>Giá từ</div>
+                          <div class="price " style="color: black;">VND 2,000,000</div>
+                          <h5>1 đêm - 2 người</h5>
+                          <a href="phong3.htm"><button class="book-btn">Xem phòng</button></a>
+                      </div>
+                  </div>
+                  <div class="tsa1 hotel star-8 type-resort price-1m-2m rating-9">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBPWbSOdZLFrWxYB5G1TDflZLtPm0NXlKG7Q&s" alt="The Paradise Resort">
+                    <div class="hotel-info">
+                        <h2>The Minh Đức</h2>
+                        <h3><i class="fa-solid fa-map-marker-alt"></i> Resort ở Quảng Ninh</h3>
+                        <p>Tọa lạc ở Hạ Long, cách Trung tâm
+                          thương mại Vincom Hạ Long 3 phút
+                          đi bộ, Minh Đức Hotel cung
+                          cấp chỗ nghỉ</p>
+                    </div>
+                    <div class="hotel-action">
+                        <h4>Rất Tốt: 201 đánh giá</h4>
+                        <button class="score-btn">8.7</button>
+                        <div>Giá từ</div>
+                        <div class="price" style="color: black;">VND 1,400,000</div>
+                        <h5>1 đêm - 2 người</h5>
+                        <a href="phong2.htm"><button class="book-btn">Xem phòng</button></a>
+                    </div>
+                </div>
+                <div class="tsa1 hotel star-7 type-resort price-2m-3m rating-7">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBPWbSOdZLFrWxYB5G1TDflZLtPm0NXlKG7Q&s" alt="The Paradise Resort">
+                  <div class="hotel-info">
+                      <h2>The Quang Doanh2</h2>
+                      <h3><i class="fa-solid fa-map-marker-alt"></i> Resort ở Quảng Ninh</h3>
+                      <p>cách
+                        trung tâm thương mại Vincom Plaza
+                        Hạ Long 1,2 km, The Quang Doanh2 </p>
+                  </div>
+                  <div class="hotel-action">
+                      <h4>Rất Tốt: 211 đánh giá</h4>
+                      <button class="score-btn">7.0</button>
+                      <div>Giá từ</div>
+                      <div class="price" style="color: black;">VND 2,900,000</div>
+                      <h5>1 đêm - 2 người</h5>
+                      <a href="phong2.htm"><button class="book-btn">Xem phòng</button></a>
+                  </div>
+              </div>
+              <div class="tsa1 hotel star-8 type-resort price-1m-2m rating-8">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBPWbSOdZLFrWxYB5G1TDflZLtPm0NXlKG7Q&s" alt="The Paradise Resort">
+                <div class="hotel-info">
+                    <h2>The Mai Hương</h2>
+                    <h3><i class="fa-solid fa-map-marker-alt"></i> Resort ở Quảng Ninh</h3>
+                    <p>The Mai Hương cung cấp
+                      chỗ nghỉ có hồ bơi ngoài trời theo
+                      mùa, chỗ đậu xe riêng, khu vườn và
+                      phòng chờ chung </p>
+                </div>
+                <div class="hotel-action">
+                    <h4>Rất Tốt: 211 đánh giá</h4>
+                    <button class="score-btn">8.2</button>
+                    <div>Giá từ</div>
+                    <div class="price" style="color: black;">VND 1,100,000</div>
+                    <h5>1 đêm - 2 người</h5>
+                    <a href="phong2.htm"><button class="book-btn">Xem phòng</button></a>
+                </div>
+            </div>
+            <div class="tsa1 hotel star-9 type-resort price-1m-2m rating-7">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBPWbSOdZLFrWxYB5G1TDflZLtPm0NXlKG7Q&s" alt="The Paradise Resort">
+              <div class="hotel-info">
+                  <h2>The Thùy Dung</h2>
+                  <h3><i class="fa-solid fa-map-marker-alt"></i> Resort ở Quảng Ninh</h3>
+                  <p>The Thùy Dung hotel cung cấp
+                    chỗ nghỉ có xe đạp miễn phí, chỗ
+                    đậu xe riêng miễn phí, khu vực bãi
+                    biển riêng và sân hiên. </p>
+              </div>
+              <div class="hotel-action">
+                  <h4>Rất Tốt: 211 đánh giá</h4>
+                  <button class="score-btn">8.0</button>
+                  <div>Giá từ</div>
+                  <div class="price" style="color: black;">VND 1,100,000</div>
+                  <h5>1 đêm - 2 người</h5>
+                  <a href="phong2.htm"><button class="book-btn">Xem phòng</button></a>
+              </div>
+          </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+  
+    <div style="height: 30px"></div>
+    <div>
+      <i
+        class="fa-solid fa-suitcase"
+        style="width: 80px; margin-left: 40px; height: 120px; font-size: 60px"
+      ></i>
+      <span style="font-size: 60px">Mã ưu đãi cho Khách Hàng !</span>
+    </div>
+    <div class="voucher-container">
+      <div class="voucher">
+        <h3>Giảm 300k</h3>
+        <p>Chỉ áp dụng cho người mới</p>
+        <button>NHẬN</button>
+      </div>
+      <div class="voucher">
+        <h3>Giảm 5%</h3>
+        <p>Khi đặt phòng khách sạn</p>
+        <button>NHẬN</button>
+      </div>
+      <div class="voucher">
+        <h3>Giảm tới 100k</h3>
+        <p>Cho khách đặt phòng lần 2</p>
+        <button>NHẬN</button>
+      </div>
+    
+    </div>
+    <div style="height: 30px"></div>
+    <div class="icon">
+      <div>
+        <i class="fa-brands fa-facebook"></i
+        ></a>
+      </div>
+      <div>
+        <i class="fa-brands fa-twitter"> </i>
+      </div>
+      <div>
+        <i class="fa-brands fa-google"></i> </a>
+      </div>
+      <div><i class="fa-solid fa-print"></i></div>
+      <div><i class="fa-brands fa-instagram"></i></div>
+    </div> 
+  
+    <div class="cuoi">
+      <div class="row row-2">
+        <div class="col-lg-4">
+          <img class="footer-logo" src="ảnh logo ko nền-01.png" alt="Logo">
+        </div>
+        <div class="col-lg-4 contact-info">
+          <h3>Liên Hệ</h3>
+          <p>Địa chỉ: Số 27 đường Trần Quốc Toàn, thành phố Quảng Ninh</p>
+          <h3>Email: QuangNinhtravling27@gmail.com</h3>
+          <p>SĐT: 0373542892</p>
+          <p>Hotline: 1900333634</p>
+          <h3>Website: <a href="index.html" target="_blank">QuangNinh27travling</a></h3>
+        </div>
+        <div class="col-lg-4 payment-method">
+          <div>
+            <img class="payment-logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+            <img class="payment-logo" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Former_Visa_%28company%29_logo.svg" alt="Visa">
+          </div>
+        </div>
+      </div>
+    
+      <div class="manhinh" style="display: flex;color: white;justify-content: space-between;">
+        <div>© Bản quyền thuộc về Quảng Ninh Travel</div>
+        <div>Đang truy cập: 1477</div>
+        <div>Tổng số người truy cập: 1.231.456</div>
+      </div>
+    </div>
+    
+  </body>
+</html>
+<script src="locdichvu.js"></script>

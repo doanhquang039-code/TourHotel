@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ẩm Thực Việt</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style1.css" />
+
+    <style>
+      .menu-toggle {
+        display: none;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+      }
+
+      .main {
+        padding: 100px 20px 40px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 36px;
+        color: #ff6600;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        max-width: 700px;
+        margin: 0 auto 40px;
+      }
+
+      .food-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 0 20px;
+      }
+
+      .food-item {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+
+      .food-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .food-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .food-item h3 {
+        font-size: 20px;
+        color: #e65c00;
+        padding: 10px;
+      }
+
+      .food-item p {
+        font-size: 26px;
+        color: #555;
+        padding: 0 10px 10px;
+      }
+      footer {
+        text-align: center;
+        padding: 5px;
+        background-color: #ff7043;
+        color: white;
+      }
+      .back-home {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        font-size: 16px;
+        transition: 0.3s ease;
+      }
+
+      .back-home:hover {
+        background-color: lightgrey;
+      }
+      .container12 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+margin: auto;
+  background-color: #85e8e8;
+}
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container12">
+        <div class="logo">
+          <img src="ảnh logo ko nền-01.png" alt="Logo" />
+        </div>
+
+        <nav class="menu" style="font-family: Calibri;">
+          <a href="index.html">Trang Chủ</a>
+          <a href="khuvuichoi.htm">Điểm đến</a>
+          <a href="amthuc.htm">Ẩm Thực</a>
+          <a href="dichvu.htm">Dịch Vụ</a>
+          <a href="tintuc.htm">Tin Tức</a>
+          <a href="lienhe.htm">Liên Hệ</a>
+          <a href="dangnhap.htm">Đăng nhập</a>
+          <a href="danhsachdichvu.htm" class="">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </nav>
+
+        <div class="right-section">
+          <div class="search-box">
+            <input type="text" placeholder="Tìm Kiếm ..." />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <a id="b" href="dangky.htm"><i class="fa-solid fa-user"></i></a>
+          <img src="snapedit_1742031043256.png" class="flag" />
+          <img src="snapedit_1742031055763.png" class="flag" />
+        </div>
+      </div>
+    </header>
+    <div style="height: 10px;"></div>
+    <div class="main">
+      <h1 style="color: aqua; margin-right: 75%">Trang chủ &gt Ẩm thực</h1>
+      <div
+        style="
+          border: 2px solid black;
+          background-color: rgb(204, 193, 193);
+          margin-bottom: 20px;
+        "
+      >
+        <p style="margin-left: 10px">
+          Breaking news : Những nhà hàng nổi tiếng về những món ăn ẩm thực đặc
+          sản (1 week a go )
+        </p>
+      </div>
+      <div class="food-gallery">
+        <div class="food-item">
+          <img
+            src="https://vcdn1-dulich.vnecdn.net/2022/06/28/buncuky3-5862-1641529343-1791-1656404005.jpg?w=460&h=0&q=100&dpr=2&fit=crop&s=_KW6HFc3tX5ELGmEIdGD0A"
+            alt="Bún Cù"
+          />
+          <h3>Bún cù</h3>
+          <p>Món bún cù kỳ Quảng Ninh, đặc sản nhất định phải thử ở Hạ Long</p>
+        </div>
+        <div class="food-item">
+          <img
+            src="https://delaseahalong.com.vn/vnt_upload/news/11_2020/m.jpg"
+            alt="Kem"
+          />
+          <h3>Kem nước hoa quả</h3>
+          <p>Món ăn mát lạnh thích hợp cho mùa hè</p>
+        </div>
+        <div class="food-item">
+          <img
+            src="https://daylambanh.edu.vn/wp-content/uploads/2018/06/cac-mon-banh-lam-tu-khoai-mi.jpg"
+            alt="Bánh mì"
+          />
+          <h3>Bánh Mì</h3>
+          <p>Bánh Khoai mì ngọt ngào.</p>
+        </div>
+        <div class="food-item">
+          <img
+            src="https://chamuchalong.com/wp-content/uploads/2024/10/cha-muc-thuong-hang.jpg"
+            alt="Chả Mực"
+          />
+          <h3>Chả Mực</h3>
+          <p>
+            Chả mực là đặc sản Quảng Ninh, làm từ mực tươi xay nhuyễn, chiên
+            giòn, thơm ngon và đậm đà
+          </p>
+        </div>
+        <div class="food-item">
+          <img
+            src="https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/trangiang/Ruoctepquangninh/ancungcom.png"
+            alt="Ruốc tép"
+          />
+          <h3>Ruốc tép</h3>
+          <p>
+            Ruốc tép là đặc sản Quảng Ninh thích hợp mua làm quà, nổi tiếng vì
+            sợi ruốc mềm, thơm,
+          </p>
+        </div>
+        <div class="food-item">
+          <img
+            src="https://statics.vinpearl.com/sam-bien-anh-thumb_1627650136.png"
+            alt="Sam Quảng Yên"
+          />
+          <h3>Sam QUảng Yên</h3>
+          <p>
+            Sam Quảng Yên to, thịt chắc , bổ dưỡng và thơm ngon, được nhiều du
+            khách ưa chuộng nhiều.
+          </p>
+        </div>
+        <div class="food-item">
+          <img
+            src="https://cdn.tgdd.vn/Files/2021/12/18/1405170/tong-hop-15-dac-san-quang-ninh-lam-xieu-long-thuc-khach-202112181504444795.jpg"
+            alt="Bánh gật gù"
+          />
+          <h3>Bánh gật gù Tiên Yên</h3>
+          <p>
+            Là một loại bánh độc đáo khi nghe từ tên gọi của nó, bánh được làm
+            từ gạo và khi xay gạo
+          </p>
+        </div>
+        <div class="food-item">
+          <img
+            src="https://cdn.tgdd.vn/Files/2021/12/18/1405170/tong-hop-15-dac-san-quang-ninh-lam-xieu-long-thuc-khach-202112181505192592.jpg"
+            alt="Gà đồi tiên yên"
+          />
+          <h3>Gà đồi</h3>
+          <p>Thịt Gà đồi Tiên Yên thơm ngon, thịt chắc, không hề dai..</p>
+        </div>
+        <div class="food-item">
+          <img
+            src="https://cdn.tgdd.vn/Files/2021/12/18/1405170/tong-hop-15-dac-san-quang-ninh-lam-xieu-long-thuc-khach-202112181509431713.jpg"
+            alt="Rượu"
+          />
+          <h3>Rượu Mơ Yên Tử</h3>
+          <p>
+            Rượu mơ Yên Tử có vị ngọt dịu, thơm và dễ uống, thích hợp cho nhiều
+            lứa tuổi
+          </p>
+        </div>
+        <div class="food-item">
+          <img
+            src="https://cdn.tgdd.vn/Files/2021/12/18/1405170/tong-hop-15-dac-san-quang-ninh-lam-xieu-long-thuc-khach-202112181509045235.jpg"
+            alt="Nộm sứa Tô Cô"
+          />
+          <h3>Nộm sứa Tô Cô</h3>
+          <p>
+            Gỏi sứa ở Cô Tô có độ giòn của sứa, cay của ớt, độ chua vừa đủ từ
+            chanh và giấm để tạo nên món nộm sứa ngon tuyệt
+          </p>
+        </div>
+        <div class="food-item">
+          <img
+            src="https://static.vinwonders.com/production/cha-muc-ha-long-04.jpg"
+            alt="Nộm sứa Tô Cô"
+          />
+          <h3>Nộm nem đặc biệt basci</h3>
+          <p>
+            Gỏi có độ giòn của sứa, cay của ớt, độ chua vừa đủ từ chanh và giấm
+            để tạo nên món nộm sứa ngon tuyệt
+          </p>
+        </div>
+        <div class="food-item">
+          <img
+            src="https://danviet.ex-cdn.com/files/f1/296231569849192448/2022/2/23/am-thuc-ha-long-1645624835532832470381.jpg"
+            alt="Nộm sứa Tô Cô"
+          />
+          <h3>Tôm hùm</h3>
+          <p>
+            Tôm hùm thì có ở rất nhiều nơi nhưng tới Quảng Ninh mà thưởng thức
+            trong lúc lênh đênh trên Vịnh Hạ Long 
+          </p>
+        </div>
+      </div>
+    </div>
+    <div style="height: 10px"></div>
+    <div class="icon">
+      <div>
+        <i class="fa-brands fa-facebook"></i
+        ></a>
+      </div>
+      <div>
+        <i class="fa-brands fa-twitter"> </i>
+      </div>
+      <div>
+        <i class="fa-brands fa-google"></i> </a>
+      </div>
+      <div><i class="fa-solid fa-print"></i></div>
+      <div><i class="fa-brands fa-instagram"></i></div>
+    </div> 
+    <div class="cuoi">
+      <div class="row row-2">
+        <div class="col-lg-4">
+          <img class="footer-logo" src="ảnh logo ko nền-01.png" alt="Logo">
+        </div>
+        <div class="col-lg-4 contact-info">
+          <h3>Liên Hệ</h3>
+          <p>Địa chỉ: Số 27 đường Trần Quốc Toàn, thành phố Quảng Ninh</p>
+          <h3>Email: QuangNinhtravling27@gmail.com</h3>
+          <p>SĐT: 0373542892</p>
+          <p>Hotline: 1900333634</p>
+          <h3>Website: <a href="https://QuangNinh27travling" target="_blank">QuangNinh27travling</a></h3>
+        </div>
+        <div class="col-lg-4 payment-method">
+          <div>
+            <img class="payment-logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+            <img class="payment-logo" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Former_Visa_%28company%29_logo.svg" alt="Visa">
+          </div>
+        </div>
+      </div>
+    
+      <div class="manhinh" style="display: flex;color: white;justify-content: space-between;">
+        <div>© Bản quyền thuộc về Quảng Ninh Travel</div>
+        <div>Đang truy cập: 1477</div>
+        <div>Tổng số người truy cập: 1.231.456</div>
+      </div>
+    </div>
+    
+  </body>
+</html>

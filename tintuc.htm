@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{
+            background-color:  #fff8f0;
+        }
+       
+        .card123 {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 20px;
+            background-color: whitesmoke;
+        }
+        .card123:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 15px rgba(0,0,0,2.8);
+        }
+
+        .dau {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 75px;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+
+        .dau img {
+            width: 300px;
+            height: 270px;
+        }
+
+        .tren {
+            text-align: center;
+        }
+
+        .abd {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        .abd img {
+            width: 400px;
+            height: 300px;
+        }
+
+        .gmail {
+            text-align: center;
+        }
+
+        .tien {
+            background-color: rgb(249, 232, 232);
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: whitesmoke;
+            border: solid 2px grey;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 15px rgba(0,0,0,2.8);
+        }
+        .dau .card,
+        .tien  div,
+        .abd .card123 {
+            flex: 1 1 300px;
+        }
+
+        .abd .card123 {
+            flex: 1 1 100px;
+        }
+
+        .card123 p {
+            margin-top: 10px;
+        }
+        .card p {
+            margin: 10%;
+        }
+        .voucher-container {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
+      .voucher {
+        width: 600px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 15px;
+        background: #f8f8f8;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .voucher h3 {
+        font-size: 28px;
+        margin-bottom: 5px;
+      }
+      .voucher p {
+        font-size: 34px;
+        color: gray;
+        margin-bottom: 15px;
+      }
+      .voucher button {
+        background: #89a88f;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+      }
+      .container12 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+margin: auto;
+  background-color: #85e8e8;
+}
+    </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container12">
+      <div class="logo">
+        <img src="ảnh logo ko nền-01.png" alt="Logo" />
+      </div>
+
+      <nav class="menu" style="font-family: Calibri;">
+        <a href="index.html">Trang Chủ</a>
+        <a href="khuvuichoi.htm">Điểm đến</a>
+        <a href="amthuc.htm">Ẩm Thực</a>
+        <a href="dichvu.htm">Dịch Vụ</a>
+        <a href="tintuc.htm">Tin Tức</a>
+        <a href="lienhe.htm">Liên Hệ</a>
+        <a href="dangnhap.htm">Đăng nhập</a>
+        <a href="danhsachdichvu.htm" class="">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </nav>
+      <div class="right-section">
+        <div class="search-box">
+          <input type="text" placeholder="Tìm Kiếm ..." />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <a id="b" href="dangky.htm"><i class="fa-solid fa-user"></i></a>
+        <img src="snapedit_1742031043256.png" class="flag" />
+        <img src="snapedit_1742031055763.png" class="flag" />
+      </div>
+    </div>
+  </header>
+   <div style="height: 10px;"></div>
+    <div class="tien">
+        <img style="width:50%; height:40%;" src="https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2025/5/4/qn35-17463605992311437254659.jpg">
+        <div>
+            <h2 style="margin-left: 10%; font-size: 35px;">Quảng Ninh đón hơn 1,1 triệu lượt khách trong kỳ nghỉ lễ 30/4-1/5</h2>
+            <p style="margin-left: 10%;font-size: 20px; margin-right: 3%;">Trong kỳ nghỉ lễ kéo dài 5 ngày 30/4-4/5, tỉnh Quảng Ninh đã đón khoảng 1,135 triệu lượt khách, tăng 112% so với cùng kỳ năm ngoái, theo báo cáo của Sở Văn hóa, Thể thao và Du lịch tỉnh Quảng Ninh.
+            </p>
+        </div>
+    </div><br><br>
+
+    <div class="tren">
+        <h1>CẢM HỨNG DU LỊCH</h1>
+        <p>Thông tin về du lịch, văn hóa, ẩm thực, các sự kiện và lễ hội tại các điểm đến Việt Nam, Đông Nam Á và thế giới</p>
+    </div>
+
+    <div class="dau">
+        <div class="card">
+            <img src="https://media.thuonghieucongluan.vn/resize_640x360/uploads/2024/11/28/tau-bien-1732793347.jpg">
+            <p><b>Dự kiến ngày 30/4, Quảng Ninh đón tàu biển đầu tiên từ thị trường Nhật Bản:</b><br><br>
+                Theo thông tin từ Sở Văn Hóa, Thể thao và Du lịch, dự kiến ngày 30/4, tàu biển Pacific World do công ty Peace Boat &lt Nhật Bản &gt quản lí.
+            </p>
+        </div>
+        <div class="card">
+            <img src="https://imgchinhsachcuocsong.vnanet.vn/MediaUpload/Org/2023/12/19/155754-vna_potal_bien_dao_viet_nam_co_to_-_huyen_dao_nhieu_tiem_nang_phat_trien_du_lich_o_vung_dong_bac__6255350.jpg">
+            <p><b>Cô Tô: sớm đưa ra các sản phẩm du lịch vào hoạt động:</b><br><br>
+                Năm 2025, huyện Cô Tô mục tiêu đón trên 300.000 lượt khách, đặc biệt phấn đấu tăng thời gian lưu trú, mức chi tiêu của du khách.
+            </p>
+        </div>
+        <div class="card">
+            <img src="https://imgchinhsachcuocsong.vnanet.vn/MediaUpload/Org/2024/12/21/113329-1.jpg">
+            <p><b>Kích cầu du lịch thu hút khách:</b><br><br>
+                Để tăng sức cạnh tranh điểm đến cũng như đón đầu thị trường khách, ngành du lịch Quảng Ninh nỗ lực đẩy mạnh hoạt động xúc tiến...
+            </p>
+        </div>
+    </div><br><br>
+
+    <div class="dau">
+        <div class="card">
+            <img src="https://truyenhinhnghean.vn/file/4028eaa46735a26101673a4df345003c/052025/img_3109_20250504172022.jpeg">
+            <p><b>10 tỉnh thành có lượng khách, doanh thu cao nhất kỳ nghỉ lễ</b><br><br>
+                Cả nước đón khoảng 10,5 triệu lượt khách 5 ngày nghỉ, trong đó TP HCM có gần 2 triệu lượt, doanh thu gấp đôi năm ngoái và Thanh Hóa có lượng khách, doanh thu cao hơn Hà Nội.
+            </p>
+        </div>
+        <div class="card">
+            <img src="https://media.baoquangninh.vn/upload/image/202503/medium/2341603_wtm_f5d533b5e41846e018da53bbb5fb1f75.jpg">
+            <p><b>Mở rộng thị trường du lịch phía Nam</b><br><br>
+                Quảng Ninh xác định các tỉnh phía Nam nói chung, TP Hồ Chí Minh nói riêng, là một trong những địa bàn khách du lịch trọng điểm. Để khai thác tối đa tiềm năng thị trường này, Quảng Ninh đang chú trọng kết nối hợp tác giữa các doanh nghiệp du lịch....
+            </p>
+        </div>
+        <div class="card">
+            <img src="https://xpscntm-asset-6aaa6adb24ad2493.s3.ap-southeast-1.amazonaws.com/2000908873691/Sun-World-Ha-Long-Tickets-84caf9b9-5f23-4418-81b9-225d20debb84.jpeg?tr=q-70,c-at_max,w-500,h-300,dpr-2">
+            <p><b>Lượng khách quốc tế tới Hạ Long tăng mạnh, vượt trội so với khách nội địa</b><br><br>
+                Dịp nghỉ lễ 30/4-1/5, nhờ thời tiết thuận lợi, các sự kiện văn hóa du lịch hấp dẫn, TP Hạ Long trở thành điểm đến được nhiều du khách quốc tế lựa chọn.
+            </p>
+        </div>
+    </div><br><br>
+
+    <h2 style="text-align: center;"><b>TIN KHUYẾN MÃI</b></h2>
+    <div class="abd" style="text-align: center;">
+        <div class="card123">
+            <img src="https://dulichvn.org.vn/nhaptin/uploads/images/0acanhsatdulich.jpg">
+            <p><b>Đảm bảo an toàn trong lĩnh vực du lịch</b></p>
+            <p>20-02-2025 12:39:11</p>
+            <p>Các cơ quan chức năng đã tăng cường công tác kiểm tra và hỗ trợ du khách nhằm đảm bảo một môi trường du lịch an toàn và thân thiện.</p>
+        </div>
+        <div class="card123">
+            <img src="https://cly.1cdn.vn/2024/01/27/16-le_hoi_chua_huong.jpg">
+            <p><b>Sôi động du lịch văn hóa tâm linh</b></p>
+            <p>20-02-2025 12:39:11</p>
+            <p>Lễ hội Chùa Hương thu hút hàng ngàn lượt khách đến tham quan và hành hương, góp phần gìn giữ bản sắc văn hóa truyền thống.</p>
+        </div>
+        <div class="card123">
+            <img src="https://media.vneconomy.vn/w800/images/upload/2024/03/26/ha-longg.jpg">
+            <p><b>Hạ Long thu hút khách đầu năm mới</b></p>
+            <p>20-02-2025 12:39:11</p>
+            <p>Ngay từ đầu năm, lượng khách đến Hạ Long tăng mạnh nhờ vào các chương trình ưu đãi, quảng bá du lịch hiệu quả và thời tiết thuận lợi.</p>
+        </div>
+    </div>
+    
+
+    <h1 style="text-align: center;margin-top: 10%;">BẠN CÓ MUỐN NHẬN TIN KHUYẾN MÃI</h1>
+    <div class="gmail">
+        <form>
+            <input style="width: 1000px; height: 25px;" type="email" id="email" name="email" placeholder="Nhập địa chỉ email của bạn" required>
+            <input style="width: 200px;height: 31px; background-color: green;color: white;font-size: 20px;" type="submit" value="Gửi ngay">
+        </form>
+    </div>
+    <div style="height: 10px;"></div>
+  <div class="icon">
+    <div>
+      <i class="fa-brands fa-facebook"></i
+      ></a>
+    </div>
+    <div>
+      <i class="fa-brands fa-twitter"> </i>
+    </div>
+    <div>
+      <i class="fa-brands fa-google"></i> </a>
+    </div>
+    <div><i class="fa-solid fa-print"></i></div>
+    <div><i class="fa-brands fa-instagram"></i></div>
+  </div> 
+  
+  <div style="height: 30px"></div>
+    <div>
+      <i
+        class="fa-solid fa-suitcase"
+        style="width: 80px; margin-left: 40px; height: 120px; font-size: 60px"
+      ></i>
+      <span style="font-size: 60px">Mã ưu đãi cho Khách Hàng !</span>
+    </div>
+    <div class="voucher-container">
+      <div class="voucher">
+        <h3>Giảm 300k</h3>
+        <p>Chỉ áp dụng cho người mới</p>
+        <button>NHẬN</button>
+      </div>
+      <div class="voucher">
+        <h3>Giảm 5%</h3>
+        <p>Khi đặt phòng khách sạn</p>
+        <button>NHẬN</button>
+      </div>
+      <div class="voucher">
+        <h3>Giảm tới 100k</h3>
+        <p>Cho khách đặt phòng lần 2</p>
+        <button>NHẬN</button>
+      </div>
+    
+    </div>
+    <div style="height: 30px;"></div>
+    <div class="voucher-container">
+        <div class="voucher">
+          <h3>Giảm 1300k</h3>
+          <p>Chỉ áp dụng cho khach VIP</p>
+          <button>NHẬN</button>
+        </div>
+        <div class="voucher">
+          <h3>Giảm 15%</h3>
+          <p>Khi đặt 3 phòng khách sạn</p>
+          <button>NHẬN</button>
+        </div>
+        <div class="voucher">
+          <h3>Giảm tới 1100k</h3>
+          <p>Cho khách đặt phòng lần 4</p>
+          <button>NHẬN</button>
+        </div>
+      
+      </div>
+   <div style="height: 30px;"></div>
+   <div class="cuoi">
+    <div class="row row-2">
+      <div class="col-lg-4">
+        <img class="footer-logo" src="ảnh logo ko nền-01.png" alt="Logo">
+      </div>
+      <div class="col-lg-4 contact-info">
+        <h3>Liên Hệ</h3>
+        <p>Địa chỉ: Số 27 đường Trần Quốc Toàn, thành phố Quảng Ninh</p>
+        <h3>Email: QuangNinhtravling27@gmail.com</h3>
+        <p>SĐT: 0373542892</p>
+        <p>Hotline: 1900333634</p>
+        <h3>Website: <a href="https://QuangNinh27travling" target="_blank">QuangNinh27travling</a></h3>
+      </div>
+      <div class="col-lg-4 payment-method">
+        <div>
+          <img class="payment-logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+          <img class="payment-logo" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Former_Visa_%28company%29_logo.svg" alt="Visa">
+        </div>
+      </div>
+    </div>
+  
+    <div class="manhinh" style="display: flex;color: white;justify-content: space-between;">
+      <div>© Bản quyền thuộc về Quảng Ninh Travel</div>
+      <div>Đang truy cập: 1477</div>
+      <div>Tổng số người truy cập: 1.231.456</div>
+    </div>
+  </div>
+  
+</body>
+</html>

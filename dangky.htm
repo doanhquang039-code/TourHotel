@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đăng ký tài khoản</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #c0c1c6;
+        font-family: Arial, sans-serif;
+      }
+
+      form {
+        width: 100%;
+        max-width: 500px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        margin-top: 100px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #198754;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        font-weight: bold;
+      }
+
+      .form-group input {
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      .error {
+        color: red;
+        font-size: 13px;
+      }
+
+      .success {
+        color: green;
+        font-size: 15px;
+        text-align: center;
+      }
+
+      button {
+        background-color: #198754;
+        color: white;
+        padding: 10px;
+        width: 100%;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background-color: #146c43;
+      }
+
+      .login-link {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <form onsubmit="return registerUser()">
+      <h2>Đăng Ký Tài Khoản</h2>
+
+      <div class="form-group">
+        <label for="name">Họ và tên:</label>
+        <input type="text" id="name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Số điện thoại:</label>
+        <input type="tel" id="phone" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="username">Tên đăng nhập:</label>
+        <input type="text" id="username" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" required />
+      </div>
+
+      <div id="error" class="error"></div>
+      <div id="success" class="success"></div>
+
+      <button type="submit">Đăng ký</button>
+
+      <div class="login-link">
+        <a href="dangnhap.htm">Đã có tài khoản? Đăng nhập</a>
+      </div>
+    </form>
+  </body>
+</html>
+<script src="js.js"></script>
